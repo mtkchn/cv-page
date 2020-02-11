@@ -1,0 +1,19 @@
+$coeficient :16.8;
+$coeficientH :10;
+$scale: 1.3;
+
+$mainColor: #06A763;
+$bgColor: #F5F5F5;
+$bgColor2: #f2f2f1;
+$navbarColor: #252e30;
+$fontColor: white;   
+$fontColor2: #616161;
+$hoverColor: #2ecc71;
+
+@function coeficient($n) {
+    @return $n/$coeficient+vw;
+  }
+  
+  @function coeficientH($n) {
+    @return $n/$coeficientH+vh;
+  }

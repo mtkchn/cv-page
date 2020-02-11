@@ -1,0 +1,440 @@
+@import "variables";
+
+@function coeficient($n) {
+  @return $n/$coeficient + vw;
+}
+
+a{
+  text-decoration: none;
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body::-webkit-scrollbar,
+section::-webkit-scrollbar {
+  width: 0;
+}
+
+.scrollInfo {
+  font-size: 18px;
+  font-family: MuliB;
+  position: fixed;
+  bottom: 70px;
+  right: 100px;
+  color: red;
+  z-index: 100;
+}
+
+h2 {
+  font-size: coeficient(32);
+  font-family: "RalewayBold", sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+}
+h3 {
+  font-family: "RalewayBold", sans-serif;
+  font-size: coeficient(18);
+  color: #fff;
+}
+.btn {
+  width: coeficient(185);
+  background-color: $mainColor;
+  border-radius: 2px;
+  text-align: center;
+  padding: coeficient(10) 0;
+  font-family: "MuliB", sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+  .mainText {
+    color: white;
+    line-height: normal;
+  }
+}
+.sectionTitle {
+  text-align: center;
+  margin: coeficient(150) 0 coeficient(50) 0;
+
+  color: $fontColor2;
+}
+.default-text {
+  color: $fontColor2;
+  line-height: coeficient(25);
+  font-size: 16px;
+  font-family: "MuliRegular", sans-serif;
+}
+.slant {
+  width: 0;
+  height: 0;
+  border-bottom: coeficient(400.5) solid $mainColor;
+  border-right: coeficient(100) solid transparent;
+  position: absolute;
+}
+.defaultSection {
+  padding: coeficient(100) coeficient(200);
+}
+.boldText {
+  font-family: "MuliB";
+}
+
+//ABOUT SECTION//
+//________________________________
+.main-container {
+  margin: 0 auto;
+  width: coeficient(970);
+}
+
+.background {
+  position: absolute;
+  height: coeficient(370);
+  width: 100%;
+  background-image: url(../img/backgrounds/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  z-index: 0;
+}
+.sectionContainer {
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+ 
+}
+
+.meSection {
+  padding: 0.07px;
+  width: 100%;
+  font-family: "RalewayBold", sans-serif;
+}
+
+.aboutMeInfo {
+
+  text-shadow: coeficient(2) coeficient(2) coeficient(4) rgba(0, 0, 0, 0.29);
+  h2 {
+    margin: coeficient(50) 0 coeficient(10) 0;
+  }
+  h3 {
+    margin-bottom: coeficient(30);
+  }
+  p {
+    margin-bottom: coeficient(40);
+  }
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  margin-bottom: coeficient(5);
+  span {
+    display: block;
+    left: 40px;
+    margin-left: coeficient(10);
+    font-weight: 600;
+    font-size: coeficient(14);
+    a{
+      color: #fff;
+    }
+  }
+  div {
+    margin-top: coeficient(3);
+    img {
+      display: block;
+      width: coeficient(20);
+    }
+  }
+}
+.links {
+  display: flex;
+  margin-left: coeficient(5);
+  .iconsContainer {
+    border-radius: 50%;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    width: coeficient(40);
+    height: coeficient(40);
+    margin: coeficient(30) coeficient(15) 0 0;
+    img {
+      height: 100%;
+    }
+  }
+}
+
+.meContainer {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin: coeficient(160) auto coeficient(50) auto;
+  background-color: $mainColor;
+  color: #fff;
+  padding-left: coeficient(50);
+  height: coeficient(400);
+  h1,
+  h2,
+  h3,
+  span,
+  p {
+    color: $fontColor;
+  }
+}
+
+.myImg {
+  width: coeficient(400);
+  height: coeficient(400);
+  overflow: hidden;
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.slider {
+  overflow: hidden;
+  display: flex;
+  width: 100%;
+  height: coeficient(80);
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  visibility: hidden;
+  .carousel {
+    display: flex;
+    transition-duration: 3000ms;
+    height: coeficient(80);
+    .slider-item {
+      height: 100%;
+      padding: coeficient(10) coeficient(20);
+      filter: grayscale(0%);
+      img {
+        height: 100%;
+      }
+    }
+  }
+}
+
+.abouteContent {
+  background-color: white;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  margin: 0 auto;
+  margin-bottom: coeficient(50);
+
+  p {
+    color: $fontColor2;
+    font-size: 18px;
+    text-align: center;
+    padding: coeficient(40);
+    line-height: 1.42857143;
+  }
+}
+.card {
+  border-top: 1px solid rgba(160, 160, 160, 0.2);
+  padding: coeficient(25) 0;
+  .btn {
+    margin: 0 auto;
+  }
+}
+
+//EDUCATION SECTION//
+//________________________________
+
+.education {
+  .sectionContainer {
+    box-shadow: none;
+    display: grid;
+    grid-template-columns: 47% 47%;
+    grid-row-gap: 50px;
+    justify-content: space-between;
+    .educationCard {
+      position: relative;
+      padding: coeficient(40) coeficient(40) coeficient(60) coeficient(40);
+      background-color: white;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+      .col1 {
+        border-bottom: 1px solid $fontColor2;
+        padding-bottom: coeficient(10);
+        .education-title {
+          color: $fontColor2;
+          font-size: 21px;
+          margin-bottom: coeficient(10);
+        }
+      }
+      .col2 {
+        padding-top: coeficient(10);
+      }
+
+      .logo-container {
+        filter: grayscale(0%);
+        position: absolute;
+        right: coeficient(70);
+        bottom: coeficient(30);
+        width: coeficient(80);
+        img {
+          width: 100%;
+        }
+      }
+      // .logo-container:nth-last-of-type(1){
+      //   right: coeficient(120);
+      // }
+    }
+  }
+}
+
+//SKILLS SECTION//
+//________________________________
+
+.skills {
+  color: white;
+  padding-bottom: coeficient(100 * $scale);
+}
+.skills-conteiner {
+  display: flex;
+  justify-content: flex-start;
+  background-color: $mainColor;
+  padding: coeficient(40);
+}
+
+.skill-item {
+  position: relative;
+  box-sizing: border-box;
+  padding: 0 coeficient(15);
+  width: coeficient(530);
+  .title-medium {
+    text-align: center;
+    font-family: "RalewayBold";
+    font-size: coeficient(21);
+    text-shadow: coeficient(2) coeficient(2) coeficient(4) rgba(0, 0, 0, 0.29);
+    margin: coeficient(30) 0 coeficient(20) 0;
+  }
+  p {
+    font-family: "RalewayBold";
+    font-size: 15px;
+    position: relative;
+    span {
+      float: right;
+    }
+  }
+}
+
+.technology-block {
+  margin-bottom: coeficient(10);
+}
+
+.progress {
+  position: relative;
+  background-color: #1c1c1c;
+  margin: coeficient(10) 0 coeficient(25) 0;
+  height: coeficient(4);
+  background-color: rgb(5, 152, 90);
+  .skill-determinate {
+    z-index: 100;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 10%;
+    height: coeficient(4);
+  }
+}
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+
+
+
+//+=========================================================
+//LOADER
+.loaderArea {
+  background: $mainColor;
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100000;
+}
+
+.loader {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  left: 50%;
+  margin-left: -20px;
+  top: 50%;
+  margin-top: -20px;
+}
+
+.loader:before,
+.loader:after {
+  content: "";
+  height: 40px;
+  width: 40px;
+  border: 8px solid rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+}
+
+.loader:before {
+  animation: animate 2s infinite linear;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0) skew(0);
+  }
+
+  100% {
+    transform: rotate(180deg) skew(360deg);
+  }
+}
+
+.loader:after {
+  animation: animate2 2s infinite linear;
+}
+
+@keyframes animate2 {
+  0% {
+    transform: rotate(0) skew(0);
+  }
+
+  100% {
+    transform: rotate(-180deg) skew(-360deg);
+  }
+}
+
+@import "fonts";
+
+//========================================================================.
+
+@import "mobile";
+
+//dpd poland
